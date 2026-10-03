@@ -299,7 +299,7 @@ function topbar() {
     ? '<a class="acct-chip is-in" href="#/settings" title="حسابي — المزامنة والإعدادات"><span class="acct-av">' + esc((ACCT.user.displayName || '؟').trim()[0]) + '</span><span class="acct-nm">' + esc(ACCT.user.displayName) + '</span></a>'
     : '<a class="acct-chip" href="#/settings" title="تسجيل الدخول"><span class="acct-av">' + ic('user', 13) + '</span><span class="acct-nm">دخول</span></a>');
   return '<header class="topbar">' +
-    '<a class="brand" href="#/"><span class="logo">ض</span><span>الآجرومية<small>شرح منظومة ابن آبّ</small></span></a>' +
+    '<a class="brand" href="#/"><span class="logo">ض</span><span>الآجرومية<small>شرح منظومة ابن اْب</small></span></a>' +
     '<span class="spacer"></span>' +
     acctChip +
     '<button class="icon-btn" id="themeBtn" aria-label="تبديل الوضع الليلي">' + ic(S.theme === 'dark' ? 'sun' : 'moon', 18) + '</button>' +
@@ -323,7 +323,7 @@ function sidebar(view) {
     acctCard = '<a class="sb-acct sb-login" href="#/settings"><span class="acct-av big">' + ic('user', 15) + '</span><div class="sba-tx"><b>تسجيل الدخول</b><small>لحفظ تقدّمك ومزامنته</small></div></a>';
   }
   return '<aside class="sidebar" aria-label="التنقل الجانبي">' +
-    '<a class="sb-brand" href="#/"><span class="logo">ض</span><span>الآجرومية<small>شرح منظومة ابن آبّ</small></span></a>' +
+    '<a class="sb-brand" href="#/"><span class="logo">ض</span><span>الآجرومية<small>شرح منظومة ابن اْب</small></span></a>' +
     '<nav class="sb-nav">' + links + '</nav>' +
     '<div class="sb-foot">' + acctCard +
     '<div class="sb-stat"><span><b>' + g.done + '</b> درسًا مكتملًا</span><span><b>' + (g.avg == null ? '—' : g.avg + '%') + '</b> متوسط الدرجات</span></div>' +
@@ -331,7 +331,7 @@ function sidebar(view) {
 }
 function foot() {
   return '<footer class="appfoot"><span class="orn">۞ ۞ ۞</span><br/>' +
-    'شرح منظومة ابن آبّ الآجرومية للمبتدئين<br/>' +
+    'شرح منظومة ابن اْب الآجرومية للمبتدئين<br/>' +
     'المحتوى مستخرج من مشروع «معهد المنهاج» · يعمل دون إنترنت' + (CAN_SYNC ? ' · وتُزامَن نتائجك عند الاتصال' : '') + '</footer>';
 }
 function bar(pct, green) {
@@ -412,7 +412,7 @@ function viewHome() {
 
   return '<section class="hero">' +
     '<span class="kicker">' + ic('star', 12) + ' من المبتدئ إلى المتخصص</span>' +
-    '<h1>شرحُ منظومةِ ابنِ آبّ <em>الآجرومية للمبتدئين</em></h1>' +
+    '<h1>شرحُ منظومةِ ابنِ اْب <em>الآجرومية للمبتدئين</em></h1>' +
     '<p>متون مؤصّلة، دروس مرتّبة، واختبارات تقيس فهمك — كل كتاب يُفتح بعد إتمام ما قبله، وكل شيء يعمل دون إنترنت.</p>' +
     '<span class="hero-actions"><a class="btn btn-gold" href="#/course/' + (fc ? fc.id : '') + '">' + ic('book', 16) + ' ابدأ متن الآجرومية</a>' +
     '<a class="btn btn-ghost" style="background:rgba(255,246,232,.12);border-color:rgba(255,246,232,.3);color:#FFF3E0" href="#/continue">' + ic('play', 15) + ' متابعة الرحلة</a></span>' +
@@ -653,6 +653,7 @@ function viewLesson(id) {
     (done && sc != null ? '<span class="chip chip-ok">' + ic('check', 11) + ' اجتزته بدرجة ' + sc + '%</span>' : '') + '</div>' +
     '</section>' +
     (l.summary ? '<div class="card lsec-card" style="margin-bottom:14px"><div class="prose" style="font-size:15.5px;color:var(--muted)"><p style="margin:0">' + esc(l.summary) + '</p></div></div>' : '') +
+    '<div class="lesson-actions no-print"><button class="btn btn-ghost" id="printLesson" type="button">' + ic('download', 15) + ' حفظ / طباعة الدرس PDF</button></div>' +
     '<div class="lesson-layout">' +
     '<nav class="tabs" aria-label="أقسام الدرس">' + chips + '</nav>' +
     '<div class="lesson-main">' +
@@ -827,7 +828,7 @@ function viewSettings() {
       '</div></div>' :
       '') +
     '<div class="sec"><div class="card set-group">' +
-    '<div class="set-row"><span class="si">' + ic('info', 17) + '</span><span class="sm"><b>عن التطبيق</b><small>«الآجرومية» — شرح منظومة ابن آبّ (عبيد ربه محمد بن آبّ التواتي) للمبتدئين. المحتوى العلمي مستخرج من مشروع «معهد المنهاج» (متون مؤصّلة وشروح مرتّبة واختبارات). يعمل التطبيق دون إنترنت بالكامل، ويمكن مزامنة التقدّم مع حساب عند الاتصال.</small></span></div>' +
+    '<div class="set-row"><span class="si">' + ic('info', 17) + '</span><span class="sm"><b>عن التطبيق</b><small>«الآجرومية» — شرح منظومة ابن اْب (عبيد ربه محمد بن اْب التواتي) للمبتدئين. المحتوى العلمي مستخرج من مشروع «معهد المنهاج» (متون مؤصّلة وشروح مرتّبة واختبارات). يعمل التطبيق دون إنترنت بالكامل، ويمكن مزامنة التقدّم مع حساب عند الاتصال.</small></span></div>' +
     '<div class="set-row"><span class="si" style="font-family:var(--font-read);font-weight:700;color:var(--gold-deep)">ض</span><span class="sm"><b>الآجرومية 2.0</b><small>متن الآجرومية · مشغّل دروس مرئي · حساب ومزامنة · واجهة للحاسوب — بيانات: ' + globalStats().total + ' درسًا · ' + TRACKS.reduce((a, t) => a + t.courses.reduce((b, c) => b + c.lessons.reduce((x, l) => x + (l.questions || []).length, 0), 0), 0) + ' سؤال اختبار</small></span></div>' +
     '</div></div>';
 }
@@ -905,6 +906,7 @@ document.addEventListener('click', (e) => {
     if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
+  if (e.target.closest('#printLesson')) { window.print(); return; }
   const lockedRow = e.target.closest('[data-locked="1"]');
   if (lockedRow) {
     e.preventDefault();

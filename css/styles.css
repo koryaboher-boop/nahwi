@@ -568,3 +568,20 @@ html.dark .dl-note { background: rgba(201,162,39,.08); }
   .matn-box { font-size: 18px; padding: 18px 16px; }
   .opt { min-height: 52px; font-size: 14px; }
 }
+
+/* ---------- lesson actions + print / PDF ---------- */
+.lesson-actions { display: flex; gap: 10px; margin-bottom: 14px; }
+.lesson-actions .btn { flex: 1; }
+@media print {
+  .tabbar, .topbar, .sidebar, .tabs, .lesson-foot, .lesson-actions,
+  .toast-wrap, .video-player, #sec-video, .quiz-act, .hero-actions,
+  .vp-play, .no-print { display: none !important; }
+  body { background: #fff; font-size: 12pt; }
+  body::before { display: none; }
+  .main-col { max-width: none; padding: 0; }
+  .lesson-layout { display: block; }
+  .card, .matn-box, .ev-card, .quote-card, .term-item, .mm-node { box-shadow: none !important; break-inside: avoid; }
+  .stable { font-size: 10pt; }
+  a { color: #000; }
+  .view { animation: none; }
+}

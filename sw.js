@@ -1,5 +1,5 @@
 ﻿/* Ù…Ù†Ø§Ø±Ø© â€” Service Worker: cache-first Ù„Ù„Ø¹Ù…Ù„ Ø§Ù„ÙƒØ§Ù…Ù„ Ø¯ÙˆÙ† Ø¥Ù†ØªØ±Ù†Øª Â· API Ø¯Ø§Ø¦Ù…Ù‹Ø§ Ù…Ù† Ø§Ù„Ø´Ø¨ÙƒØ© */
-const CACHE = 'ajroumiya-v7';
+const CACHE = 'ajroumiya-v10';
 const ASSETS = [
   './index.html?v=83',
   './css/styles.css?v=83',
